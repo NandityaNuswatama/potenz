@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2CCCC"
+    tools:context=".ui.choice.TestResultFragment">
+
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/hasil"
+        style="@style/TextNunito18BlackBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/img_hasil_test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView12"
+        style="@style/TextNunito18BlackWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        tools:text="Pekerja\nKreatif"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView13"
+        style="@style/TextNunito13NormalBlackregular"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        tools:text="Kamu adalah seseorang yang kreatif, pekerja keras, dan memiliki kemampuan bekerjasama yang baik.\n\n Hal ini membuatmu cocok untuk melanjutkan karier di bidang kreatif seperti desain dan media."
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView14"
+        style="@style/TextNunito14SBPurple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/karakteristik_teratas"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <ImageView
+        android:id="@+id/img_char1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:src="@drawable/img_karasteristik_1"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/tvChar1"
+        style="@style/TextNunito13NormalBlackregular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        tools:text="Creative Master"
+        app:layout_constraintStart_toEndOf="@+id/img_char1"
+        app:layout_constraintTop_toTopOf="@+id/img_char1" />
+
+    <TextView
+        android:id="@+id/tvChar1percent"
+        style="@style/TextNunito18BlackBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        tools:text="40%"
+        android:textColor="@color/pink_accent"
+        app:layout_constraintStart_toStartOf="@+id/tvChar1"
+        app:layout_constraintTop_toBottomOf="@+id/tvChar1" />
+
+    <ImageView
+        android:id="@+id/img_char2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/img_char1"
+        tools:src="@drawable/img_karasteristik_1" />
+
+    <TextView
+        android:id="@+id/tvChar2"
+        style="@style/TextNunito13NormalBlackregular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        tools:text="Creative Master"
+        app:layout_constraintStart_toEndOf="@+id/img_char2"
+        app:layout_constraintTop_toTopOf="@+id/img_char2" />
+
+    <TextView
+        android:id="@+id/tvChar2percent"
+        style="@style/TextNunito18BlackBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        tools:text="40%"
+        android:textColor="@color/pink_accent"
+        app:layout_constraintStart_toStartOf="@+id/tvChar2"
+        app:layout_constraintTop_toBottomOf="@+id/tvChar2" />
+
+    <ImageView
+        android:id="@+id/img_char3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/img_char2"
+        tools:src="@drawable/img_karasteristik_1" />
+
+    <TextView
+        android:id="@+id/tvChar3"
+        style="@style/TextNunito13NormalBlackregular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        tools:text="Creative Master"
+        app:layout_constraintStart_toEndOf="@+id/img_char3"
+        app:layout_constraintTop_toTopOf="@+id/img_char3" />
+
+    <TextView
+        android:id="@+id/tvChar3percent"
+        style="@style/TextNunito18BlackBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        tools:text="40%"
+        android:textColor="@color/pink_accent"
+        app:layout_constraintStart_toStartOf="@+id/tvChar3"
+        app:layout_constraintTop_toBottomOf="@+id/tvChar3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/pink_accent"
+        android:text="Lihat Rekomendasi Konten"
+        android:textAllCaps="false"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

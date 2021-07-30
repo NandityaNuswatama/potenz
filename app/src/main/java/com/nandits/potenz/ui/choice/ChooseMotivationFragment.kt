@@ -4,21 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.nandits.potenz.R
 import com.nandits.potenz.databinding.FragmentChooseMotivationBinding
-import com.nandits.potenz.ui.adapter.ChoiceAdapter
+import com.nandits.potenz.ui.adapter.MultiSelectAdapter
 import com.nandits.potenz.utils.ListData
 import org.koin.android.ext.android.inject
+import timber.log.Timber
 
 
 class ChooseMotivationFragment : Fragment() {
     private var _binding: FragmentChooseMotivationBinding? = null
     private val binding get() = _binding!!
-    private val mAdapter by inject<ChoiceAdapter>()
+    private val mAdapter by inject<MultiSelectAdapter>()
     
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -50,9 +50,7 @@ class ChooseMotivationFragment : Fragment() {
             mAdapter.setData(ListData.listMotivation)
             mAdapter.onItemClick = {
                 it.isSelected = !it.isSelected
-                isSelected = it.isSelected
-                Toast.makeText(requireContext(), it.toString(), Toast.LENGTH_SHORT)
-                    .show()
+                Timber.d(it.isSelected.toString())
             }
         }
     }

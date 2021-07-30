@@ -8,27 +8,44 @@ import com.nandits.potenz.R
 import com.nandits.potenz.data.model.CardItem
 import com.nandits.potenz.databinding.ItemMotivationBinding
 
-class ChoiceAdapter: RecyclerView.Adapter<ChoiceAdapter.MotivationViewHolder>() {
+class MultiSelectAdapter : RecyclerView.Adapter<MultiSelectAdapter.MotivationViewHolder>() {
     private var listData = ArrayList<CardItem>()
-    var onItemClick: ((CardItem) -> Unit)?= null
+    var onItemClick: ((CardItem) -> Unit)? = null
+    private var selectedItem = arrayListOf<CardItem>()
     
-    fun setData(list: List<CardItem>?){
+    init {
+        setHasStableIds(true)
+    }
+    
+    fun setData(list: List<CardItem>?) {
         if (list == null) return
         listData.clear()
         listData.addAll(list)
         notifyDataSetChanged()
     }
     
-    inner class MotivationViewHolder(private val binding: ItemMotivationBinding): RecyclerView.ViewHolder(binding.root)  {
-        fun bind(item: CardItem){
-            with(binding){
+    inner class MotivationViewHolder(private val binding: ItemMotivationBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: CardItem) {
+            with(binding) {
                 tvCard.text = item.title
                 imgCard.load(item.image)
-                if (item.isSelected) root.setBackgroundColor(itemView.context.getColor(R.color.pink_accent_soft))
-                root.setOnClickListener{
+                
+                root.setOnClickListener {
+                    selectItem(binding, listData[adapterPosition])
                     onItemClick?.invoke(listData[adapterPosition])
                 }
             }
+        }
+    }
+    
+    private fun selectItem(binding: ItemMotivationBinding, item: CardItem) {
+        if (!selectedItem.contains(item)) {
+            selectedItem.add(item)
+            binding.root.setBackgroundResource(R.drawable.background_card_pink)
+        } else {
+            selectedItem.remove(item)
+            binding.root.setBackgroundResource(R.drawable.background_card_white)
         }
     }
     
@@ -43,6 +60,10 @@ class ChoiceAdapter: RecyclerView.Adapter<ChoiceAdapter.MotivationViewHolder>() 
     
     override fun getItemCount(): Int {
         return listData.size
+    }
+    
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
     }
     
 }

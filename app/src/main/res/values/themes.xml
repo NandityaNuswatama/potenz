@@ -44,11 +44,23 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="TextNunito18BlackBlack" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/nunito_black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
     <style name="TextNunito13NormalBlackCentre" parent="TextAppearance.AppCompat">
         <item name="android:fontFamily">@font/nunito</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">13sp</item>
         <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextNunito13NormalBlackregular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
     </style>
 
     <style name="TextNunito14SBPurple" parent="TextAppearance.AppCompat">

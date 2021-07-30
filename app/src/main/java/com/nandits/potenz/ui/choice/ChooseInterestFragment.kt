@@ -8,17 +8,15 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.nandits.potenz.R
 import com.nandits.potenz.databinding.FragmentChooseInterestBinding
-import com.nandits.potenz.databinding.FragmentChooseMotivationBinding
-import com.nandits.potenz.ui.adapter.ChoiceAdapter
+import com.nandits.potenz.ui.adapter.MultiSelectAdapter
 import com.nandits.potenz.utils.ListData
 import org.koin.android.ext.android.inject
 
 class ChooseInterestFragment : Fragment() {
     private var _binding: FragmentChooseInterestBinding? = null
     private val binding get() = _binding!!
-    private val mAdapter by inject<ChoiceAdapter>()
+    private val mAdapter by inject<MultiSelectAdapter>()
     
     override fun onCreateView(
         inflater: LayoutInflater,
