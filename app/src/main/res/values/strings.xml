@@ -19,4 +19,14 @@
     <string name="artikel">Artikel</string>
     <string name="baca_artikel_terpilih_khusus_untukmu">Baca artikel terpilih khusus untukmu</string>
     <string name="hi_rania_dwi">Hi, Rania Dwi!</string>
+    <string name="apa_motivasimu_menggunakan_potenz">Apa motivasimu menggunakan potenz?</string>
+    <string name="mencari_tahu_potensi_diri">Mencari tahu potensi diri</string>
+    <string name="menentukan_pilihan_jurusan_yang_tepat">Menentukan pilihan jurusan yang tepat</string>
+    <string name="mencari_tahu_beragam_opsi">Mencari tahu beragam opsi</string>
+    <string name="mengasah_potensi_diri_dan_hardskill">Mengasah potensi diri dan hardskill</string>
+    <string name="mengisi_waktu_luang">Mengisi waktu luang</string>
+    <string name="mempersiapkan_karier_impian">Mempersiapkan karier impian</string>
+    <string name="lanjutkan">Lanjutkan</string>
+    <string name="apa_karier_impianmu_saat_ini">Apa karier\nimpianmu saat ini?</string>
+    <string name="psikotes_adalah">Psikotes merupakan serangkaian tes yang dilakukan untuk mengetahui minat, bakat, serta potensi terbaikmu. Hasil dari tes ini akan membantu <b>potenz</b> untuk merekomendasikan konten belajar, artikel, dan latihan yang didesain untuk mendukung pengembangan potensimu.</string>
 </resources>

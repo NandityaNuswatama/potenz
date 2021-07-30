@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nandits.potenz.R
 import com.nandits.potenz.databinding.FragmentHomeBinding
@@ -39,7 +40,16 @@ class HomeFragment : Fragment() {
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initListener()
         initRv()
+    }
+    
+    private fun initListener(){
+        with(binding){
+            btnPsikotes.setOnClickListener {
+                findNavController().navigate(R.id.action_navigation_home_to_landingTestFragment)
+            }
+        }
     }
     
     private fun initRv(){

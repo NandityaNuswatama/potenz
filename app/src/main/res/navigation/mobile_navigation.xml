@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="com.nandits.potenz.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_landingTestFragment"
+            app:destination="@id/landingTestFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_course"
@@ -31,5 +35,28 @@
         <action
             android:id="@+id/action_splashFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseMotivationFragment"
+        android:name="com.nandits.potenz.ui.choice.ChooseMotivationFragment"
+        android:label="fragment_choose_motivation"
+        tools:layout="@layout/fragment_choose_motivation" >
+        <action
+            android:id="@+id/action_chooseMotivationFragment_to_chooseInterestFragment"
+            app:destination="@id/chooseInterestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseInterestFragment"
+        android:name="com.nandits.potenz.ui.choice.ChooseInterestFragment"
+        android:label="fragment_choose_interest"
+        tools:layout="@layout/fragment_choose_interest" />
+    <fragment
+        android:id="@+id/landingTestFragment"
+        android:name="com.nandits.potenz.ui.choice.LandingTestFragment"
+        android:label="fragment_landing_test"
+        tools:layout="@layout/fragment_landing_test" >
+        <action
+            android:id="@+id/action_landingTestFragment_to_chooseMotivationFragment"
+            app:destination="@id/chooseMotivationFragment" />
     </fragment>
 </navigation>
