@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/splashFragment">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -12,14 +12,24 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.nandits.potenz.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_course"
+        android:name="com.nandits.potenz.ui.course.CourseFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_course" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.nandits.potenz.ui.notifications.NotificationsFragment"
+        android:id="@+id/navigation_profile"
+        android:name="com.nandits.potenz.ui.profile.ProfileFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.nandits.potenz.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 </navigation>

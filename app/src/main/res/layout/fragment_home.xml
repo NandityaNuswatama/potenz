@@ -1,22 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/background_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/icon_home"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="63dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="75dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/icon_potenz_hor_big"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/TextNunito18BlackWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/hi_rania_dwi"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/TextNunito12White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/subscription"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/tvSubs"
+            style="@style/TextNunito14BlackWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="@string/premium"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/TextNunito12White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/status"
+            app:layout_constraintStart_toStartOf="@+id/tvSubs"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubs" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            style="@style/TextNunito14BlackWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/pengejar_karier"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/TextNunito16BlackPurple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/psikotes"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/textView7"
+            style="@style/TextNunito14Purple"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/ikuti_tes_dan_temukan_potensi_terbaikmu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <ImageButton
+            android:id="@+id/btnPsikotes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_psikotes_online_"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView8"
+            style="@style/TextNunito16BlackPurple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/artikel"
+            app:layout_constraintStart_toStartOf="@+id/btnPsikotes"
+            app:layout_constraintTop_toBottomOf="@+id/btnPsikotes" />
+
+        <TextView
+            android:id="@+id/textView9"
+            style="@style/TextNunito14Purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/baca_artikel_terpilih_khusus_untukmu"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_article"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            tools:listitem="@layout/item_cardview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -15,7 +15,7 @@ class MyApp: Application() {
             androidLogger(Level.NONE)
             androidContext(this@MyApp)
             modules(
-                localModule
+                localModule, adapterModule
             )
         }
     }
