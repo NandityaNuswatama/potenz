@@ -7,6 +7,7 @@ import com.nandits.potenz.data.remote.RemoteDataSource
 import com.nandits.potenz.ui.adapter.CardItemAdapter
 import com.nandits.potenz.ui.adapter.MultiSelectAdapter
 import com.nandits.potenz.ui.choice.ChoiceViewModel
+import com.nandits.potenz.ui.home.HomeViewModel
 import com.nandits.potenz.ui.profile.ProfileViewModel
 import com.nandits.potenz.ui.start.LoginViewModel
 import okhttp3.OkHttpClient
@@ -45,6 +46,7 @@ val repositoryModule = module {
 }
 
 val viewModelModule = module {
+    single { HomeViewModel(get())}
     single { ChoiceViewModel() }
     single { LoginViewModel(get()) }
     single { ProfileViewModel(get())}

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.nandits.potenz.R
 import com.nandits.potenz.databinding.FragmentChooseInterestBinding
 import com.nandits.potenz.ui.adapter.MultiSelectAdapter
 import com.nandits.potenz.utils.ListData
@@ -36,6 +37,7 @@ class ChooseInterestFragment : Fragment() {
     private fun initListener(){
         with(binding){
             btnClose.setOnClickListener { findNavController().navigateUp() }
+            btnNext.setOnClickListener { findNavController().navigate(R.id.action_chooseInterestFragment_to_chooseMotivationFragment) }
         }
     }
     

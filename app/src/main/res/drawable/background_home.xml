@@ -4,7 +4,7 @@
     <solid
         android:color="@color/purple_main"/>
     <size
-        android:height="211dp"/>
+        android:height="250dp"/>
     <corners
         android:bottomLeftRadius="36dp"
         android:bottomRightRadius="36dp"/>

@@ -38,7 +38,7 @@ class ChooseMotivationFragment : Fragment() {
     private fun initListener() {
         with(binding) {
             btnClose.setOnClickListener { findNavController().navigateUp() }
-            btnNext.setOnClickListener { findNavController().navigate(R.id.action_chooseMotivationFragment_to_chooseInterestFragment) }
+//            btnNext.setOnClickListener { findNavController().navigate(R.id.action_chooseMotivationFragment_to_chooseInterestFragment) }
         }
     }
     

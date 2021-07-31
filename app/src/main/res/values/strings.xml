@@ -18,7 +18,8 @@
     <string name="ikuti_tes_dan_temukan_potensi_terbaikmu">Ikuti tes dan temukan potensi terbaikmu</string>
     <string name="artikel">Artikel</string>
     <string name="baca_artikel_terpilih_khusus_untukmu">Baca artikel terpilih khusus untukmu</string>
-    <string name="hi_rania_dwi">Hi, Rania Dwi!</string>
+    <string name="hi_">Hi, </string>
+    <string name="hi_placeholder">Hi, %s!</string>
     <string name="apa_motivasimu_menggunakan_potenz">Apa motivasimu menggunakan potenz?</string>
     <string name="mencari_tahu_potensi_diri">Mencari tahu potensi diri</string>
     <string name="menentukan_pilihan_jurusan_yang_tepat">Menentukan pilihan jurusan yang tepat</string>
@@ -32,4 +33,13 @@
     <string name="hasil">Hasil</string>
     <string name="karakteristik_teratas">Karakteristik Teratas</string>
     <string name="log_out">Log Out</string>
+    <string name="pendidikan">Pendidikan</string>
+
+    <string-array name="pendidikan_options">
+        <item>--Pilih Pendidikan--</item>
+        <item>SMP</item>
+        <item>SMA</item>
+        <item>Kuliah</item>
+        <item>Sudah Berkarir</item>
+    </string-array>
 </resources>
