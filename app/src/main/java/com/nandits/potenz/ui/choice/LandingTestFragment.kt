@@ -26,7 +26,7 @@ class LandingTestFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(R.id.action_landingTestFragment_to_chooseInterestFragment)
+//            findNavController().navigate(R.id.action_landingTestFragment_to_chooseInterestFragment)
         }
     }
     

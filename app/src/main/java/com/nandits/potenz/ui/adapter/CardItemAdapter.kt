@@ -2,12 +2,16 @@ package com.nandits.potenz.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.view.isGone
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.nandits.potenz.data.model.CardItem
 import com.nandits.potenz.databinding.ItemCardviewBinding
+import com.nandits.potenz.utils.NONE
+import timber.log.Timber
 
-class CardItemAdapter: RecyclerView.Adapter<CardItemAdapter.CardViewHolder>() {
+class CardItemAdapter(private val subscription: String): RecyclerView.Adapter<CardItemAdapter.CardViewHolder>() {
     private var listData = ArrayList<CardItem>()
     var onItemClick: ((CardItem) -> Unit)?= null
     
@@ -23,9 +27,20 @@ class CardItemAdapter: RecyclerView.Adapter<CardItemAdapter.CardViewHolder>() {
             with(binding){
                 tvCard.text = item.title
                 imgCard.load(item.image)
-                
-                root.setOnClickListener{
-                    onItemClick?.invoke(listData[adapterPosition])
+                Timber.d(subscription)
+                if (subscription == NONE){
+                    blurCover.isGone = adapterPosition == 0
+                } else {
+                    blurCover.isGone = true
+                }
+                if (blurCover.isGone){
+                    root.setOnClickListener{
+                        onItemClick?.invoke(listData[adapterPosition])
+                    }
+                }else{
+                    root.setOnClickListener{
+                        Toast.makeText(itemView.context, "Silahkan membeli kunci terlebih dahulu", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }

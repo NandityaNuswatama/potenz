@@ -13,13 +13,12 @@ import com.nandits.potenz.data.remote.Resource
 import com.nandits.potenz.databinding.FragmentHomeBinding
 import com.nandits.potenz.ui.adapter.CardItemAdapter
 import com.nandits.potenz.utils.ListData
-import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
-    private val mAdapter by inject<CardItemAdapter>()
     private val viewModel by viewModel<HomeViewModel>()
+    private lateinit var mAdapter: CardItemAdapter
     
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -38,7 +37,6 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initHeader()
         initListener()
-        initRv()
     }
     
     private fun initHeader(){
@@ -55,6 +53,8 @@ class HomeFragment : Fragment() {
                         tvStatus.text = data?.status
                         tvPendidikan.text = data?.level
                         tvName.text = resources.getString(R.string.hi_placeholder, data?.name)
+                        mAdapter = CardItemAdapter(data?.subscription.toString())
+                        initRv()
                     }
                 }
             }

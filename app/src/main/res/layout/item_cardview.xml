@@ -25,4 +25,10 @@
         tools:text="Menentukan pilihan jurusan yang tepat"
         style="@style/TextNunito13NormalBlackCentre"/>
 
+    <ImageView
+        android:id="@+id/blurCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_blur"/>
+
 </com.google.android.material.card.MaterialCardView>

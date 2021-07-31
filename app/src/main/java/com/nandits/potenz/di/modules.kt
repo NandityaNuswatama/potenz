@@ -53,6 +53,5 @@ val viewModelModule = module {
 }
 
 val adapterModule = module {
-    factory { CardItemAdapter() }
     factory { MultiSelectAdapter() }
 }
