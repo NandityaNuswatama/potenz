@@ -20,5 +20,7 @@ class Repository(
     
     fun saveUser(user: UserModel) = userPreference.saveUser(user)
     
+    fun getTicket() = userPreference.getTicket()
+    
     fun logOut() = userPreference.eraseData()
 }

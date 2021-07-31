@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.nandits.potenz.R
 import com.nandits.potenz.data.remote.Resource
 import com.nandits.potenz.databinding.FragmentProfileBinding
+import com.nandits.potenz.ui.vm.ProfileViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ProfileFragment : Fragment() {

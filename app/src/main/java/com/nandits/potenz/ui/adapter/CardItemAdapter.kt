@@ -27,7 +27,6 @@ class CardItemAdapter(private val subscription: String): RecyclerView.Adapter<Ca
             with(binding){
                 tvCard.text = item.title
                 imgCard.load(item.image)
-                Timber.d(subscription)
                 if (subscription == NONE){
                     blurCover.isGone = adapterPosition == 0
                 } else {

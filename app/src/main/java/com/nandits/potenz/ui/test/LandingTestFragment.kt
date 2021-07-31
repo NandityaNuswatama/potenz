@@ -8,7 +8,6 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.nandits.potenz.R
-import com.nandits.potenz.databinding.FragmentCourseBinding
 import com.nandits.potenz.databinding.FragmentLandingTestBinding
 import com.nandits.potenz.ui.test.TestFragment.Companion.QUESTION_INDEX
 

@@ -1,4 +1,4 @@
-package com.nandits.potenz.ui.start
+package com.nandits.potenz.ui.vm
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData

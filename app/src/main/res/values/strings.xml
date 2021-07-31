@@ -4,13 +4,13 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="profile">Profile</string>
-    <string name="insight">Insight</string>
+    <string name="insight">Insights</string>
     <string name="course">Course</string>
     <string name="consult">Consult</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="image_content">Image Content</string>
-    <string name="subscription">Subscription</string>
+    <string name="subscription">Jumlah Tiket</string>
     <string name="premium">Premium</string>
     <string name="status">Status</string>
     <string name="pengejar_karier">Pengejar Karier</string>
@@ -38,6 +38,22 @@
     <string name="question1">Pernyataan mana paling menggambarkan kamu?</string>
     <string name="question2">Bagaimana kamu membuat keputusan di tempat kerja?</string>
     <string name="question3">pa preferensi kamu ketika mengerjakan sebuah proyek?</string>
+    <string name="video">Video</string>
+    <string name="masuk">Masuk</string>
+    <string name="nama">nama</string>
+    <string name="masuk_akun">Masuk Akun</string>
+    <string name="progress">Progress</string>
+    <string name="test_result">Test Result</string>
+    <string name="creative_master">Creative Master</string>
+    <string name="_40">40%</string>
+    <string name="pracical_hardworker">Pracical Hardworker</string>
+    <string name="_25">25%</string>
+    <string name="_15">15%</string>
+    <string name="people_hero">People Hero</string>
+    <string name="karakteristik">Karakteristik</string>
+    <string name="design">Design</string>
+    <string name="photography">Photography</string>
+    <string name="videography">Videography</string>
 
     <string-array name="pendidikan_options">
         <item>--Pilih Pendidikan--</item>

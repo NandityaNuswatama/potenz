@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        tools:src="@drawable/img_karasteristik_1"
+        android:src="@drawable/img_karasteristik_1"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -78,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        tools:text="Creative Master"
+        android:text="@string/creative_master"
         app:layout_constraintStart_toEndOf="@+id/img_char1"
         app:layout_constraintTop_toTopOf="@+id/img_char1" />
 
@@ -88,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        tools:text="40%"
+        android:text="@string/_40"
         android:textColor="@color/pink_accent"
         app:layout_constraintStart_toStartOf="@+id/tvChar1"
         app:layout_constraintTop_toBottomOf="@+id/tvChar1" />
@@ -100,7 +100,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/img_char1"
-        tools:src="@drawable/img_karasteristik_1" />
+        android:src="@drawable/img_karasteristik_2" />
 
     <TextView
         android:id="@+id/tvChar2"
@@ -108,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        tools:text="Creative Master"
+        android:text="@string/pracical_hardworker"
         app:layout_constraintStart_toEndOf="@+id/img_char2"
         app:layout_constraintTop_toTopOf="@+id/img_char2" />
 
@@ -118,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        tools:text="40%"
+        android:text="@string/_25"
         android:textColor="@color/pink_accent"
         app:layout_constraintStart_toStartOf="@+id/tvChar2"
         app:layout_constraintTop_toBottomOf="@+id/tvChar2" />
@@ -130,7 +130,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/img_char2"
-        tools:src="@drawable/img_karasteristik_1" />
+        android:src="@drawable/img_karasteristik_3" />
 
     <TextView
         android:id="@+id/tvChar3"
@@ -138,7 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        tools:text="Creative Master"
+        android:text="@string/people_hero"
         app:layout_constraintStart_toEndOf="@+id/img_char3"
         app:layout_constraintTop_toTopOf="@+id/img_char3" />
 
@@ -148,7 +148,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        tools:text="40%"
+        android:text="@string/_15"
         android:textColor="@color/pink_accent"
         app:layout_constraintStart_toStartOf="@+id/tvChar3"
         app:layout_constraintTop_toBottomOf="@+id/tvChar3" />

@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:text="Masuk Akun"
+        android:text="@string/masuk_akun"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
@@ -36,13 +36,15 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:hint="nama"
+        android:hint="@string/nama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/textView15">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtName"
+            android:inputType="text"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="1" />
@@ -56,7 +58,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="48dp"
         android:backgroundTint="@color/pink_accent"
-        android:text="Masuk"
+        android:text="@string/masuk"
         android:textAllCaps="false"
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"

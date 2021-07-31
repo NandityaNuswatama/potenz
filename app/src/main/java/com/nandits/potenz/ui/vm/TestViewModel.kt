@@ -1,4 +1,4 @@
-package com.nandits.potenz.ui.test
+package com.nandits.potenz.ui.vm
 
 import androidx.lifecycle.ViewModel
 

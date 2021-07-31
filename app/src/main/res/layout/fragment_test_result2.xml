@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.insight.TestResultFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp">
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/karakteristik"
+            style="@style/TextNunito14SBPurple"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_char1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/img_karasteristik_1"
+            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <TextView
+            android:id="@+id/tvChar1"
+            style="@style/TextNunito13NormalBlackregular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/creative_master"
+            app:layout_constraintStart_toEndOf="@+id/img_char1"
+            app:layout_constraintTop_toTopOf="@+id/img_char1" />
+
+        <TextView
+            android:id="@+id/tvChar1percent"
+            style="@style/TextNunito18BlackBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/_40"
+            android:textColor="@color/pink_accent"
+            app:layout_constraintStart_toStartOf="@+id/tvChar1"
+            app:layout_constraintTop_toBottomOf="@+id/tvChar1" />
+
+        <ImageView
+            android:id="@+id/img_char2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/img_char1"
+            android:src="@drawable/img_karasteristik_2" />
+
+        <TextView
+            android:id="@+id/tvChar2"
+            style="@style/TextNunito13NormalBlackregular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/pracical_hardworker"
+            app:layout_constraintStart_toEndOf="@+id/img_char2"
+            app:layout_constraintTop_toTopOf="@+id/img_char2" />
+
+        <TextView
+            android:id="@+id/tvChar2percent"
+            style="@style/TextNunito18BlackBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/_25"
+            android:textColor="@color/pink_accent"
+            app:layout_constraintStart_toStartOf="@+id/tvChar2"
+            app:layout_constraintTop_toBottomOf="@+id/tvChar2" />
+
+        <ImageView
+            android:id="@+id/img_char3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/img_char2"
+            android:src="@drawable/img_karasteristik_3" />
+
+        <TextView
+            android:id="@+id/tvChar3"
+            style="@style/TextNunito13NormalBlackregular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/people_hero"
+            app:layout_constraintStart_toEndOf="@+id/img_char3"
+            app:layout_constraintTop_toTopOf="@+id/img_char3" />
+
+        <TextView
+            android:id="@+id/tvChar3percent"
+            style="@style/TextNunito18BlackBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/_15"
+            android:textColor="@color/pink_accent"
+            app:layout_constraintStart_toStartOf="@+id/tvChar3"
+            app:layout_constraintTop_toBottomOf="@+id/tvChar3" />
+
+        <TextView
+            android:id="@+id/textView19"
+            style="@style/TextNunito14SBPurple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Rekomendasi Jurusan"
+            app:layout_constraintStart_toStartOf="@+id/img_char3"
+            app:layout_constraintTop_toBottomOf="@+id/img_char3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvJurusan"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView19"
+            app:layout_constraintTop_toBottomOf="@+id/textView19"
+            tools:listitem="@layout/item_cardview" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Rekomendasi Karir"
+            app:layout_constraintStart_toStartOf="@+id/rvJurusan"
+            app:layout_constraintTop_toBottomOf="@+id/rvJurusan" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvKarir"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView20"
+            tools:listitem="@layout/item_cardview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.nandits.potenz.R
 import com.nandits.potenz.data.model.UserModel
 import com.nandits.potenz.data.remote.Resource
 import com.nandits.potenz.databinding.FragmentLoginBinding
+import com.nandits.potenz.ui.vm.LoginViewModel
 import com.nandits.potenz.utils.NONE
 import com.nandits.potenz.utils.STATUS_DEF
 import org.koin.androidx.viewmodel.ext.android.viewModel

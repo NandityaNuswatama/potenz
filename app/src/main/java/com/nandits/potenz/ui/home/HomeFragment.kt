@@ -12,6 +12,7 @@ import com.nandits.potenz.R
 import com.nandits.potenz.data.remote.Resource
 import com.nandits.potenz.databinding.FragmentHomeBinding
 import com.nandits.potenz.ui.adapter.CardItemAdapter
+import com.nandits.potenz.ui.vm.HomeViewModel
 import com.nandits.potenz.utils.ListData
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -49,7 +50,7 @@ class HomeFragment : Fragment() {
                 is Resource.Success -> {
                     val data = it.data
                     with(binding){
-                        tvSubs.text = data?.subscription
+                        tvSubs.text = data?.subscription.toString()
                         tvStatus.text = data?.status
                         tvPendidikan.text = data?.level
                         tvName.text = resources.getString(R.string.hi_placeholder, data?.name)
