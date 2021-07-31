@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
+import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nandits.potenz.R
@@ -16,6 +18,7 @@ import com.nandits.potenz.ui.adapter.CardItemAdapter
 import com.nandits.potenz.ui.learn.DetailFragment.Companion.URL
 import com.nandits.potenz.ui.vm.HomeViewModel
 import com.nandits.potenz.utils.ListData
+import com.nandits.potenz.utils.dialogShow
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
@@ -45,11 +48,15 @@ class HomeFragment : Fragment() {
     private fun initHeader(){
         viewModel.getUser().observe(viewLifecycleOwner, {
             when(it){
-                is Resource.Loading -> {}
+                is Resource.Loading -> {
+                    isLoading(true)
+                }
                 is Resource.Error -> {
+                    isLoading(false)
                     Toast.makeText(requireContext(), "Something is wrong...", Toast.LENGTH_SHORT).show()
                 }
                 is Resource.Success -> {
+                    isLoading(false)
                     val data = it.data
                     with(binding){
                         tvSubs.text = data?.subscription.toString()
@@ -82,7 +89,16 @@ class HomeFragment : Fragment() {
                 findNavController().navigate(R.id.action_navigation_home_to_detailFragment,
                     bundleOf(URL to it.url))
             }
+            mAdapter.cantOpenClick = {
+                activity?.dialogShow {
+                    findNavController().navigate(R.id.action_navigation_course_to_ticketFragment)
+                }
+            }
         }
+    }
+    
+    private fun isLoading(bool: Boolean){
+        binding.progressBar.isGone = !bool
     }
     
     override fun onDestroyView() {

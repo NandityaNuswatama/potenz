@@ -2,7 +2,6 @@ package com.nandits.potenz.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
@@ -13,6 +12,7 @@ import com.nandits.potenz.utils.NONE
 class CardItemAdapter1(private val subscription: String): RecyclerView.Adapter<CardItemAdapter1.CardViewHolder>() {
     private var listData = ArrayList<CardItem>()
     var onItemClick: ((CardItem) -> Unit)? = null
+    var cantOpenClick: ((Int) -> Unit)?= null
     
     fun setData(list: List<CardItem>?) {
         if (list == null) return
@@ -38,11 +38,9 @@ class CardItemAdapter1(private val subscription: String): RecyclerView.Adapter<C
                     }
                 } else {
                     root.setOnClickListener {
-                        Toast.makeText(
-                            itemView.context,
-                            "Silahkan membeli kunci terlebih dahulu",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        root.setOnClickListener {
+                            cantOpenClick?.invoke(adapterPosition)
+                        }
                     }
                 }
             }

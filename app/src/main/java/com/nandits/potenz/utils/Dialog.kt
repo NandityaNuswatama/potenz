@@ -4,20 +4,13 @@ import android.app.Activity
 import androidx.appcompat.app.AlertDialog
 
 fun Activity.dialogShow(
-    title: String, message: String, cancelable: Boolean = false,
-    positiveButton: String, positiveAction: () -> Unit = {},
-    negativeButton: String, negativeAction: () -> Unit = {}
+    positiveAction: () -> Unit = {}
 ) {
     AlertDialog.Builder(this).apply {
-        setTitle(title)
-        setMessage(message)
-        setCancelable(cancelable)
-        setPositiveButton(positiveButton) { dialog, _ ->
+        setTitle("Konten Terkunci")
+        setMessage("Untuk membuka konten ini Anda memerlukan tiket. Ingin beli tiket?")
+        setPositiveButton("Beli tiket") { dialog, _ ->
             positiveAction()
-            dialog.dismiss()
-        }
-        setNegativeButton(negativeButton) { dialog, _ ->
-            negativeAction()
             dialog.dismiss()
         }
         create()

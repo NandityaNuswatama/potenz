@@ -31,7 +31,7 @@
         app:tabIndicatorColor="@color/pink_accent_soft"
         app:tabTextColor="@color/white" />
 
-    <androidx.viewpager.widget.ViewPager
+    <com.nandits.potenz.ui.learn.CustomViewPager
         android:id="@+id/viewPager"
         android:layout_width="0dp"
         android:layout_height="0dp"

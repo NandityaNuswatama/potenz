@@ -14,6 +14,7 @@ import timber.log.Timber
 class CardItemAdapter(private val subscription: String): RecyclerView.Adapter<CardItemAdapter.CardViewHolder>() {
     private var listData = ArrayList<CardItem>()
     var onItemClick: ((CardItem) -> Unit)?= null
+    var cantOpenClick: ((Int) -> Unit)?= null
     
     fun setData(list: List<CardItem>?){
         if (list == null) return
@@ -38,7 +39,9 @@ class CardItemAdapter(private val subscription: String): RecyclerView.Adapter<Ca
                     }
                 }else{
                     root.setOnClickListener{
-                        Toast.makeText(itemView.context, "Silahkan membeli kunci terlebih dahulu", Toast.LENGTH_SHORT).show()
+                        root.setOnClickListener {
+                            cantOpenClick?.invoke(adapterPosition)
+                        }
                     }
                 }
             }

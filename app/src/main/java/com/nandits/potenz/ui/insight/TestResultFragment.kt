@@ -1,23 +1,21 @@
 package com.nandits.potenz.ui.insight
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nandits.potenz.R
-import com.nandits.potenz.databinding.ActivityMainBinding.inflate
 import com.nandits.potenz.databinding.FragmentTestResult2Binding
-import com.nandits.potenz.databinding.FragmentTestResultBinding
 import com.nandits.potenz.ui.adapter.CardItemAdapter
 import com.nandits.potenz.ui.adapter.CardItemAdapter1
 import com.nandits.potenz.ui.learn.DetailFragment.Companion.URL
 import com.nandits.potenz.ui.vm.LearnViewModel
 import com.nandits.potenz.utils.ListData
+import com.nandits.potenz.utils.dialogShow
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TestResultFragment : Fragment() {
@@ -61,6 +59,11 @@ class TestResultFragment : Fragment() {
                     bundleOf(URL to it.url)
                 )
             }
+            mAdapter.cantOpenClick = {
+                activity?.dialogShow {
+                    findNavController().navigate(R.id.action_navigation_course_to_ticketFragment)
+                }
+            }
         }
         with(binding.rvKarir) {
             mAdapter1 = CardItemAdapter1(viewModel.getTicket().toString())
@@ -73,6 +76,11 @@ class TestResultFragment : Fragment() {
                     R.id.action_navigation_insight_to_detailFragment,
                     bundleOf(URL to it.url)
                 )
+            }
+            mAdapter1.cantOpenClick = {
+                activity?.dialogShow {
+                    findNavController().navigate(R.id.action_navigation_course_to_ticketFragment)
+                }
             }
         }
     }
