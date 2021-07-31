@@ -65,6 +65,96 @@ object ListData {
         return list
     }
     
+    private val softDevImages = intArrayOf(
+        R.drawable.icon_self_dev,
+        R.drawable.img_ilus,
+        R.drawable.img_man,
+    )
+    
+    private val softDevTitles = arrayOf(
+        "Top Programming Language",
+        "Why Kotlin?",
+        "Python is The Best"
+    )
+    
+    private val softDevLink = arrayOf(
+        "https://www.fullstackacademy.com/blog/nine-best-programming-languages-to-learn",
+        "https://www.xenonstack.com/blog/kotlin-andriod",
+        "https://www.bairesdev.com/technologies/why-is-python-top-language/"
+    )
+    
+    val listSoftDev: ArrayList<CardItem>get(){
+        val list = arrayListOf<CardItem>()
+        for (position in softDevImages.indices){
+            list.add(
+                CardItem(
+                    image = softDevImages[position],
+                    title = softDevTitles[position],
+                    url = softDevLink[position]
+                )
+            )
+        }
+        return list
+    }
+    
+    private val karirImages = intArrayOf(
+        R.drawable.img_dog,
+        R.drawable.img_mempersiapkan_diri,
+        R.drawable.img_ilmuwan,
+    )
+    
+    private val karirTitles = arrayOf(
+        "Machine Learning Engineer",
+        "Mobile Developer",
+        "Cyber Security Analyst"
+    )
+    
+    private val karirLink = arrayOf(
+        "https://glints.com/id/lowongan/machine-learning-engineer/",
+        "https://glints.com/id/lowongan/apa-itu-mobile-developer/",
+        "https://glints.com/id/lowongan/security-analyst-adalah/"
+    )
+    
+    val listKarir: ArrayList<CardItem>get(){
+        val list = arrayListOf<CardItem>()
+        for (position in karirImages.indices){
+            list.add(
+                CardItem(
+                    image = karirImages[position],
+                    title = karirTitles[position],
+                    url = karirLink[position]
+                )
+            )
+        }
+        return list
+    }
+    
+    private val techTitles = arrayOf(
+        "Top Technology Trends",
+        "How is Machine Learning works?",
+        "Mobile Development Future"
+    )
+    
+    private val techLink = arrayOf(
+        "https://www.simplilearn.com/top-technology-trends-and-jobs-article",
+        "https://www.sas.com/en_id/insights/analytics/machine-learning.html",
+        "https://thescalers.com/7-mobile-app-development-trends-for-2021-and-beyond/"
+    )
+    
+    val listTech: ArrayList<CardItem>get(){
+        val list = arrayListOf<CardItem>()
+        for (position in karirImages.indices){
+            list.add(
+                CardItem(
+                    image = karirImages[position],
+                    title = techTitles[position],
+                    url = techLink[position]
+                )
+            )
+        }
+        return list
+    }
+    
     private val motivationImages = intArrayOf(
         R.drawable.img_mencari_potensi,
         R.drawable.img_menentukan_jurusan,

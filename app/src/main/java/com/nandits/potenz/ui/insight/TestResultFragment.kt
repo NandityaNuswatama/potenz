@@ -14,6 +14,7 @@ import com.nandits.potenz.databinding.ActivityMainBinding.inflate
 import com.nandits.potenz.databinding.FragmentTestResult2Binding
 import com.nandits.potenz.databinding.FragmentTestResultBinding
 import com.nandits.potenz.ui.adapter.CardItemAdapter
+import com.nandits.potenz.ui.adapter.CardItemAdapter1
 import com.nandits.potenz.ui.learn.DetailFragment.Companion.URL
 import com.nandits.potenz.ui.vm.LearnViewModel
 import com.nandits.potenz.utils.ListData
@@ -23,6 +24,7 @@ class TestResultFragment : Fragment() {
     private var _binding: FragmentTestResult2Binding? = null
     private val binding get() = _binding!!
     private lateinit var mAdapter: CardItemAdapter
+    private lateinit var mAdapter1: CardItemAdapter1
     private val viewModel by viewModel<LearnViewModel>()
     
     override fun onCreateView(
@@ -47,8 +49,8 @@ class TestResultFragment : Fragment() {
     }
     
     private fun initRv() {
-        mAdapter = CardItemAdapter(viewModel.getTicket().toString())
         with(binding.rvJurusan) {
+            mAdapter = CardItemAdapter(viewModel.getTicket().toString())
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = mAdapter
             setHasFixedSize(true)
@@ -61,11 +63,12 @@ class TestResultFragment : Fragment() {
             }
         }
         with(binding.rvKarir) {
+            mAdapter1 = CardItemAdapter1(viewModel.getTicket().toString())
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            adapter = mAdapter
+            adapter = mAdapter1
             setHasFixedSize(true)
-            mAdapter.setData(ListData.listJurusan)
-            mAdapter.onItemClick = {
+            mAdapter1.setData(ListData.listKarir)
+            mAdapter1.onItemClick = {
                 findNavController().navigate(
                     R.id.action_navigation_insight_to_detailFragment,
                     bundleOf(URL to it.url)

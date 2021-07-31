@@ -73,9 +73,13 @@
     <string name="lihat_rekomendasi_konten">Lihat Rekomendasi Konten</string>
     <string name="rekomendasi_karir">Rekomendasi Karir</string>
     <string name="rekomendasi_jurusan">Rekomendasi Jurusan</string>
+    <string name="programming_language">Programming Language</string>
+    <string name="tech_trends">Tech Trends</string>
+    <string name="software_engineering">Software Engineering</string>
+    <string name="self_development">Self Development</string>
 
     <string-array name="pendidikan_options">
-        <item>--Pilih Pendidikan--</item>
+        <item>-- Pilih Pendidikan --</item>
         <item>SMP</item>
         <item>SMA</item>
         <item>Kuliah</item>

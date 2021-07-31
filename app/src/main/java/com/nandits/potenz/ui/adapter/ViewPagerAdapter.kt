@@ -11,15 +11,15 @@ import com.nandits.potenz.ui.learn.VideoFragment
 class ViewPagerAdapter(private val context: Context, fm: FragmentManager)
     : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
     private val tabTitle = arrayOf(
-        R.string.video,
         R.string.artikel,
+        R.string.video,
     )
     
     override fun getItem(position: Int): Fragment {
         var fragment: Fragment?= null
         when(position){
-            0 -> fragment = VideoFragment()
-            1 -> fragment = ArticleFragment()
+            0 -> fragment = ArticleFragment()
+            1 -> fragment = VideoFragment()
         }
         return fragment as Fragment
     }

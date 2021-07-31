@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.nandits.potenz.R
 import com.nandits.potenz.databinding.FragmentArticleBinding
 import com.nandits.potenz.ui.adapter.CardItemAdapter
+import com.nandits.potenz.ui.adapter.CardItemAdapter1
+import com.nandits.potenz.ui.adapter.CardItemAdapter2
 import com.nandits.potenz.ui.learn.DetailFragment.Companion.URL
 import com.nandits.potenz.ui.vm.LearnViewModel
 import com.nandits.potenz.utils.ListData
@@ -21,6 +23,8 @@ class ArticleFragment : Fragment() {
     private var _binding: FragmentArticleBinding? = null
     private val binding get() = _binding!!
     private lateinit var mAdapter: CardItemAdapter
+    private lateinit var mAdapter1: CardItemAdapter1
+    private lateinit var mAdapter2: CardItemAdapter2
     private val viewModel by viewModel<LearnViewModel>()
     
     override fun onCreateView(
@@ -45,12 +49,12 @@ class ArticleFragment : Fragment() {
     }
     
     private fun initRv() {
-        mAdapter = CardItemAdapter(viewModel.getTicket().toString())
         with(binding.rvFirst) {
+            mAdapter = CardItemAdapter(viewModel.getTicket().toString())
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = mAdapter
             setHasFixedSize(true)
-            mAdapter.setData(ListData.listArticle)
+            mAdapter.setData(ListData.listSoftDev)
             mAdapter.onItemClick = {
                 findNavController().navigate(
                     R.id.action_navigation_course_to_detailFragment,
@@ -59,11 +63,12 @@ class ArticleFragment : Fragment() {
             }
         }
         with(binding.rvSecond) {
+            mAdapter1 = CardItemAdapter1(viewModel.getTicket().toString())
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            adapter = mAdapter
+            adapter = mAdapter1
             setHasFixedSize(true)
-            mAdapter.setData(ListData.listJurusan)
-            mAdapter.onItemClick = {
+            mAdapter1.setData(ListData.listTech)
+            mAdapter1.onItemClick = {
                 findNavController().navigate(
                     R.id.action_navigation_course_to_detailFragment,
                     bundleOf(URL to it.url)
@@ -71,11 +76,12 @@ class ArticleFragment : Fragment() {
             }
         }
         with(binding.rvThird) {
+            mAdapter2 = CardItemAdapter2(viewModel.getTicket().toString())
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            adapter = mAdapter
+            adapter = mAdapter2
             setHasFixedSize(true)
-            mAdapter.setData(ListData.listArticle)
-            mAdapter.onItemClick = {
+            mAdapter2.setData(ListData.listArticle)
+            mAdapter2.onItemClick = {
                 findNavController().navigate(
                     R.id.action_navigation_course_to_detailFragment,
                     bundleOf(URL to it.url)
