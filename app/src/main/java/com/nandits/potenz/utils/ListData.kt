@@ -13,7 +13,13 @@ object ListData {
     private val articleTitles = arrayOf(
         "Top 15 Resources For Self-Development",
         "How to Think About Your Career",
-        "Top 15 Resources For Self-Development"
+        "Top 10 Job skills in 2025"
+    )
+    
+    private val articleLink = arrayOf(
+        "https://medium.com/@AmJohn5on/top-15-resources-for-self-development-cc1178030f4",
+        "https://medium.com/the-year-of-the-looking-glass/how-to-think-about-your-career-abf5300eba08",
+        "https://www.linkedin.com/pulse/top-10-job-skills-2025-understanding-your-key-future-asger-daugbjerg#:~:text=The%202025%20Top%2010%20job,tolerance%20and%20flexibility%20and%20ideation."
     )
     
     val listArticle: ArrayList<CardItem>get(){
@@ -22,7 +28,37 @@ object ListData {
             list.add(
                 CardItem(
                     image = articleImages[position],
-                    title = articleTitles[position]
+                    title = articleTitles[position],
+                    url = articleLink[position]
+                )
+            )
+        }
+        return list
+    }
+    
+    private val jurusanImages = intArrayOf(
+        R.drawable.img_programmer,
+        R.drawable.img_communication,
+    )
+    
+    private val jurusanTitles = arrayOf(
+        "Teknologi Informasi UGM",
+        "Ilmu Komputer UGM",
+    )
+    
+    private val jurusanLink = arrayOf(
+        "https://sarjana.jteti.ugm.ac.id/program-sarjana/s1-teknologi-informasi/",
+        "https://cs.ugm.ac.id/tentang-ilmu-komputer/",
+    )
+    
+    val listJurusan: ArrayList<CardItem>get(){
+        val list = arrayListOf<CardItem>()
+        for (position in jurusanImages.indices){
+            list.add(
+                CardItem(
+                    image = jurusanImages[position],
+                    title = jurusanTitles[position],
+                    url = jurusanLink[position]
                 )
             )
         }
@@ -75,7 +111,7 @@ object ListData {
         "Engineer atau Programmer",
         "Desainer",
         "Manajer",
-        "Dokter"
+        "Bisnis"
     )
     
     val listInterest: ArrayList<CardItem>get(){

@@ -13,13 +13,23 @@
         <action
             android:id="@+id/action_navigation_home_to_landingTestFragment"
             app:destination="@id/landingTestFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_ticketFragment"
+            app:destination="@id/ticketFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_course"
         android:name="com.nandits.potenz.ui.learn.LearnFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_learn" />
+        tools:layout="@layout/fragment_learn" >
+        <action
+            android:id="@+id/action_navigation_course_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -40,7 +50,11 @@
         android:id="@+id/navigation_insight"
         android:name="com.nandits.potenz.ui.insight.InsightFragment"
         android:label="fragment_insight"
-        tools:layout="@layout/fragment_insight" />
+        tools:layout="@layout/fragment_insight" >
+        <action
+            android:id="@+id/action_navigation_insight_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/splashFragment"
@@ -118,7 +132,11 @@
         android:id="@+id/testResultFragment"
         android:name="com.nandits.potenz.ui.test.TestResultFragment"
         android:label="fragment_test_result"
-        tools:layout="@layout/fragment_test_result" />
+        tools:layout="@layout/fragment_test_result" >
+        <action
+            android:id="@+id/action_testResultFragment_to_navigation_insight"
+            app:destination="@id/navigation_insight" />
+    </fragment>
     <fragment
         android:id="@+id/ticketFragment"
         android:name="com.nandits.potenz.ui.payment.TicketFragment"
@@ -150,4 +168,9 @@
             app:popUpTo="@id/successFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.nandits.potenz.ui.learn.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
 </navigation>

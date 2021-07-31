@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,6 +13,7 @@ import com.nandits.potenz.R
 import com.nandits.potenz.data.remote.Resource
 import com.nandits.potenz.databinding.FragmentHomeBinding
 import com.nandits.potenz.ui.adapter.CardItemAdapter
+import com.nandits.potenz.ui.learn.DetailFragment.Companion.URL
 import com.nandits.potenz.ui.vm.HomeViewModel
 import com.nandits.potenz.utils.ListData
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -77,7 +79,8 @@ class HomeFragment : Fragment() {
             setHasFixedSize(true)
             mAdapter.setData(ListData.listArticle)
             mAdapter.onItemClick = {
-                Toast.makeText(requireContext(), it.title, Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_navigation_home_to_detailFragment,
+                    bundleOf(URL to it.url))
             }
         }
     }

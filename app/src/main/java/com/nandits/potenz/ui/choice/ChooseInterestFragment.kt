@@ -50,7 +50,6 @@ class ChooseInterestFragment : Fragment() {
             mAdapter.onItemClick = {
                 it.isSelected = !it.isSelected
                 isSelected = it.isSelected
-                Toast.makeText(requireContext(), it.isSelected.toString(), Toast.LENGTH_SHORT).show()
             }
         }
     }

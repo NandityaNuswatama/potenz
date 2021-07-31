@@ -6,11 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.nandits.potenz.R
 import com.nandits.potenz.databinding.ActivityMainBinding.inflate
 import com.nandits.potenz.databinding.FragmentTestResult2Binding
 import com.nandits.potenz.databinding.FragmentTestResultBinding
 import com.nandits.potenz.ui.adapter.CardItemAdapter
+import com.nandits.potenz.ui.learn.DetailFragment.Companion.URL
 import com.nandits.potenz.ui.vm.LearnViewModel
 import com.nandits.potenz.utils.ListData
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -36,30 +40,36 @@ class TestResultFragment : Fragment() {
         initRv()
     }
     
-    private fun initListener(){
-        with(binding){
+    private fun initListener() {
+        with(binding) {
         
         }
     }
     
-    private fun initRv(){
+    private fun initRv() {
         mAdapter = CardItemAdapter(viewModel.getTicket().toString())
-        with(binding.rvJurusan){
+        with(binding.rvJurusan) {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = mAdapter
             setHasFixedSize(true)
-            mAdapter.setData(ListData.listArticle)
+            mAdapter.setData(ListData.listJurusan)
             mAdapter.onItemClick = {
-                Toast.makeText(requireContext(), it.title, Toast.LENGTH_SHORT).show()
+                findNavController().navigate(
+                    R.id.action_navigation_insight_to_detailFragment,
+                    bundleOf(URL to it.url)
+                )
             }
         }
-        with(binding.rvKarir){
+        with(binding.rvKarir) {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = mAdapter
             setHasFixedSize(true)
-            mAdapter.setData(ListData.listArticle)
+            mAdapter.setData(ListData.listJurusan)
             mAdapter.onItemClick = {
-                Toast.makeText(requireContext(), it.title, Toast.LENGTH_SHORT).show()
+                findNavController().navigate(
+                    R.id.action_navigation_insight_to_detailFragment,
+                    bundleOf(URL to it.url)
+                )
             }
         }
     }

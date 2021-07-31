@@ -37,7 +37,7 @@
     <string name="learn">Learn</string>
     <string name="question1">Pernyataan mana paling menggambarkan kamu?</string>
     <string name="question2">Bagaimana kamu membuat keputusan di tempat kerja?</string>
-    <string name="question3">pa preferensi kamu ketika mengerjakan sebuah proyek?</string>
+    <string name="question3">Apa preferensi kamu ketika mengerjakan sebuah proyek?</string>
     <string name="video">Video</string>
     <string name="masuk">Masuk</string>
     <string name="nama">nama</string>
@@ -66,6 +66,13 @@
     <string name="pembayaran_berhasil">Pembayaran Berhasil!</string>
     <string name="x1">x1</string>
     <string name="rp_20000">Rp. 20000</string>
+    <string name="critical_thinking">Critical Thinking</string>
+    <string name="smart_seeker">Smart Seeker</string>
+    <string name="kamu_adalah_sesorang_yang_memiliki_cara_berpikir_yang_kritis_kamu_juga_tertarik_dengan_teknologi_dan_ingin_terjun_dalam_pengembangannya_n_nselain_itu_kamu_memiliki_sifat_yang_cerdas_dalam_belajar">Kamu adalah sesorang yang memiliki cara berpikir yang kritis. Kamu juga tertarik dengan teknologi dan ingin terjun dalam pengembangannya.\n\nSelain itu, kamu memiliki sifat yang cerdas dalam belajar.</string>
+    <string name="software_ndeveloper">Software\nDeveloper</string>
+    <string name="lihat_rekomendasi_konten">Lihat Rekomendasi Konten</string>
+    <string name="rekomendasi_karir">Rekomendasi Karir</string>
+    <string name="rekomendasi_jurusan">Rekomendasi Jurusan</string>
 
     <string-array name="pendidikan_options">
         <item>--Pilih Pendidikan--</item>

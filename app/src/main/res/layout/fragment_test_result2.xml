@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@string/creative_master"
+            android:text="@string/critical_thinking"
             app:layout_constraintStart_toEndOf="@+id/img_char1"
             app:layout_constraintTop_toTopOf="@+id/img_char1" />
 
@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@string/people_hero"
+            android:text="@string/smart_seeker"
             app:layout_constraintStart_toEndOf="@+id/img_char3"
             app:layout_constraintTop_toTopOf="@+id/img_char3" />
 
@@ -116,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Rekomendasi Jurusan"
+            android:text="@string/rekomendasi_jurusan"
             app:layout_constraintStart_toStartOf="@+id/img_char3"
             app:layout_constraintTop_toBottomOf="@+id/img_char3" />
 
@@ -133,10 +133,11 @@
 
         <TextView
             android:id="@+id/textView20"
+            style="@style/TextNunito14SBPurple"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Rekomendasi Karir"
+            android:text="@string/rekomendasi_karir"
             app:layout_constraintStart_toStartOf="@+id/rvJurusan"
             app:layout_constraintTop_toBottomOf="@+id/rvJurusan" />
 

@@ -55,12 +55,15 @@ class TestFragment : Fragment() {
                     mAdapter.setData(ListData.question2)
                     mAdapter.onItemClick = {
                         findNavController().navigate(R.id.action_testFragment_self, bundleOf(
-                            QUESTION_INDEX to INDEX2))
+                            QUESTION_INDEX to INDEX3))
                     }
                 }
                 INDEX3 ->{
                     binding.tvQuestion.text = resources.getString(R.string.question3)
                     mAdapter.setData(ListData.question3)
+                    mAdapter.onItemClick = {
+                        findNavController().navigate(R.id.action_testFragment_to_testResultFragment)
+                    }
                 }
             }
         }
