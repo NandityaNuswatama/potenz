@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "762204224072",
+    "firebase_url": "https://cepatahu-bef60-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "cepatahu-bef60",
+    "storage_bucket": "cepatahu-bef60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762204224072:android:82007b14d9528ecd68367d",
+        "android_client_info": {
+          "package_name": "com.nandits.cepatahu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762204224072-1thlrqj3hqsvoharucc8fcdvovbu0ou2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUeB-M21WcwEhP1B6xsgs0EPDTl0x-z1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762204224072-1thlrqj3hqsvoharucc8fcdvovbu0ou2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
