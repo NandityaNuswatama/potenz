@@ -3,10 +3,7 @@ package com.nandits.potenz.data.remote
 import com.google.gson.JsonObject
 import com.nandits.potenz.data.model.UserModel
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.PUT
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface ApiService {
     
@@ -22,5 +19,11 @@ interface ApiService {
     @GET("user/{name}.json")
     suspend fun getUser(
         @Path("name") name: String
+    ): Response<UserModel>
+    
+    @PATCH("user/{name}.json")
+    suspend fun updateUser(
+        @Path("name") name: String,
+        @Body body: JsonObject
     ): Response<UserModel>
 }

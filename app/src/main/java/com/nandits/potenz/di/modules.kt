@@ -7,10 +7,7 @@ import com.nandits.potenz.data.remote.RemoteDataSource
 import com.nandits.potenz.ui.adapter.MultiSelectAdapter
 import com.nandits.potenz.ui.adapter.TestAdapter
 import com.nandits.potenz.ui.choice.ChoiceViewModel
-import com.nandits.potenz.ui.vm.HomeViewModel
-import com.nandits.potenz.ui.vm.LearnViewModel
-import com.nandits.potenz.ui.vm.ProfileViewModel
-import com.nandits.potenz.ui.vm.LoginViewModel
+import com.nandits.potenz.ui.vm.*
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -52,6 +49,7 @@ val viewModelModule = module {
     single { LoginViewModel(get()) }
     single { ProfileViewModel(get()) }
     single { LearnViewModel(get()) }
+    single { PaymentViewModel(get()) }
 }
 
 val adapterModule = module {

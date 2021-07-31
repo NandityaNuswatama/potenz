@@ -1,5 +1,6 @@
 package com.nandits.potenz.data
 
+import com.google.gson.JsonObject
 import com.nandits.potenz.data.local.UserPreference
 import com.nandits.potenz.data.model.UserModel
 import com.nandits.potenz.data.remote.RemoteDataSource
@@ -23,4 +24,6 @@ class Repository(
     fun getTicket() = userPreference.getTicket()
     
     fun logOut() = userPreference.eraseData()
+    
+    fun updateUser(body: JsonObject) = remoteDataSource.updateUser(userPreference.getName().toString(), body)
 }

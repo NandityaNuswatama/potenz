@@ -31,6 +31,9 @@
             app:destination="@id/loginFragment"
             app:popUpTo="@id/navigation_profile"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_profile_to_ticketFragment"
+            app:destination="@id/ticketFragment" />
     </fragment>
 
     <fragment
@@ -116,4 +119,35 @@
         android:name="com.nandits.potenz.ui.test.TestResultFragment"
         android:label="fragment_test_result"
         tools:layout="@layout/fragment_test_result" />
+    <fragment
+        android:id="@+id/ticketFragment"
+        android:name="com.nandits.potenz.ui.payment.TicketFragment"
+        android:label="fragment_ticket"
+        tools:layout="@layout/fragment_ticket" >
+        <action
+            android:id="@+id/action_ticketFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.nandits.potenz.ui.payment.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_successFragment"
+            app:destination="@id/successFragment"
+            app:popUpTo="@id/paymentFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.nandits.potenz.ui.payment.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" >
+        <action
+            android:id="@+id/action_successFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/successFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

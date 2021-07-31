@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/btnTiket"
         android:layout_width="86dp"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_kupon"
@@ -56,28 +56,28 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/img10"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_keamanan"
-        app:layout_constraintStart_toStartOf="@+id/imageView11"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+        app:layout_constraintStart_toStartOf="@+id/btnTiket"
+        app:layout_constraintTop_toBottomOf="@+id/btnTiket" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/img20"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_notifikasi"
-        app:layout_constraintStart_toStartOf="@+id/imageView12"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+        app:layout_constraintStart_toStartOf="@+id/img10"
+        app:layout_constraintTop_toBottomOf="@+id/img10" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/img30"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_bantuan"
-        app:layout_constraintStart_toStartOf="@+id/imageView13"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        app:layout_constraintStart_toStartOf="@+id/img20"
+        app:layout_constraintTop_toBottomOf="@+id/img20" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogout"

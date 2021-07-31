@@ -15,6 +15,7 @@ import com.nandits.potenz.data.remote.Resource
 import com.nandits.potenz.databinding.FragmentLoginBinding
 import com.nandits.potenz.ui.vm.LoginViewModel
 import com.nandits.potenz.utils.NONE
+import com.nandits.potenz.utils.NOT_YET
 import com.nandits.potenz.utils.STATUS_DEF
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -53,7 +54,7 @@ class LoginFragment : Fragment(), AdapterView.OnItemSelectedListener {
                         is Resource.Loading -> {
                         }
                         is Resource.Error -> {
-                            viewModel.login(name, UserModel(name, NONE, STATUS_DEF, level))
+                            viewModel.login(name, UserModel(name, NONE, STATUS_DEF, level, NOT_YET, NOT_YET))
                                 .observe(viewLifecycleOwner, { login ->
                                     when (login) {
                                         is Resource.Loading -> {

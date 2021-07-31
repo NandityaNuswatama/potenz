@@ -60,4 +60,22 @@ class RemoteDataSource(private val apiService: ApiService) {
             }
         }.flowOn(Dispatchers.IO)
     }
+    
+    fun updateUser(name: String, body: JsonObject): Flow<Resource<UserModel>> {
+        return flow {
+            emit(Resource.Loading())
+            try {
+                val response = apiService.updateUser(name, body)
+                if (response.isSuccessful) {
+                    emit(Resource.Success(response.body() as UserModel))
+                } else {
+                    emit(Resource.Error(response.message()))
+                    Timber.e(response.message())
+                }
+            } catch (e: Exception) {
+                emit(Resource.Error(e.toString()))
+                Timber.e(e)
+            }
+        }.flowOn(Dispatchers.IO)
+    }
 }

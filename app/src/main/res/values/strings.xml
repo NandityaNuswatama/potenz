@@ -54,6 +54,18 @@
     <string name="design">Design</string>
     <string name="photography">Photography</string>
     <string name="videography">Videography</string>
+    <string name="tiket">Tiket</string>
+    <string name="pembayaran">Pembayaran</string>
+    <string name="x0">x0</string>
+    <string name="total">Total</string>
+    <string name="rp_0">Rp. 0</string>
+    <string name="saya_sudah_bayar">Saya Sudah Bayar</string>
+    <string name="kembali_ke_home">Kembali ke Home</string>
+    <string name="kini_kamu_bisa_mengakses_konten_premium_dengan_tiket_yang_telah_kamu_beli_kamu_bisa_melihat_jumlah_tiketmu_di_home">Kini kamu bisa mengakses konten premium dengan tiket yang telah kamu beli. Kamu bisa melihat jumlah tiketmu di Home.</string>
+    <string name="selamat_pembelian_tiket_sudah_berhasil">Selamat, pembelian tiket sudah berhasil!</string>
+    <string name="pembayaran_berhasil">Pembayaran Berhasil!</string>
+    <string name="x1">x1</string>
+    <string name="rp_20000">Rp. 20000</string>
 
     <string-array name="pendidikan_options">
         <item>--Pilih Pendidikan--</item>

@@ -35,6 +35,9 @@ class ProfileFragment : Fragment() {
                 viewModel.logOut()
                 findNavController().navigate(R.id.action_navigation_profile_to_loginFragment)
             }
+            btnTiket.setOnClickListener {
+                findNavController().navigate(R.id.action_navigation_profile_to_ticketFragment)
+            }
         }
     }
     

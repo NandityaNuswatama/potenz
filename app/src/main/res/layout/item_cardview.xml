@@ -27,8 +27,10 @@
 
     <ImageView
         android:id="@+id/blurCover"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/img_blur"/>
+        android:layout_width="126dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/img_blur" />
 
 </com.google.android.material.card.MaterialCardView>

@@ -5,4 +5,6 @@ data class UserModel(
     val subscription: String,
     val status: String,
     val level: String,
+    val interest: String,
+    val potency: String,
 )
