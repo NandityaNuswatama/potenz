@@ -90,4 +90,34 @@ object ListData {
         }
         return list
     }
+    
+    val question1 = listOf(
+        "Saya analitis dan terorganisasi",
+        "Saya bergaul dan menentukan",
+        "Saya empati dan teliti",
+        "Saya jeli dan kreatif",
+        "Saya bergairah dan spontan",
+        "Saya ambisius dan ingin tahu"
+    )
+    
+    val question2 = listOf(
+        "Memutuskan berdasarkan pada pilihan yang akan lebih menarik bagi pengguna",
+        "Melakukan penelitian untuk mencari data guna mendukung keputusanmu",
+        "Melakukan beberapa tes pada pilihan yang berbeda sebelum membuat keputusan",
+        "Membuat mindmap untuk menentukan pilihan terbaik",
+        "Mengevaluasi semua kemungkinan solusi untuk menentukan pendekatan terbaik",
+        "Membuat keputusan yang memiliki dampak terbesar pada perusahaan",
+        "Mencari keputusan yang paling unik yang orang-orang belum pernah coba sebelumnya"
+    )
+    
+    val question3 = listOf(
+        "Kamu melihat catatan masa lalu untuk menganalisa data dan mengidentifikasi wawasan berharga untuk mengidentifikasi",
+        "Kamu memecah masalah, menarik pengetahuan dari data yang kompleks, dan merancang solusi praktis dan berskala",
+        "Melakukan beberapa tes pada pilihan yang berbeda sebelum membuat keputusan",
+        "Kamu membangun struktur dan kerangka proyek dan menguji hipotesis sebelum memberikan produk akhir",
+        "Kamu melakukan brainstorm ide dengan anggota tim dan fokus pada sisi kreatif",
+        "Kamu menetapkan tujuan dan membuat rencana aksi yang rinci untuk memberikan hasil yang baik",
+        "Kamu merencanakan roadmap proyek dan memastikan setiap detail kecil sudah dimasukkan",
+        "Kamu merancang ide dan membuat berbagai rencana sebelum kamu mengerjakan draft pertamamu"
+    )
 }

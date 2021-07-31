@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnTest"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginBottom="14dp"
+    android:backgroundTint="@color/purple_bg"
+    android:padding="10dp"
+    android:textAllCaps="false"
+    android:textColor="@color/orange_bright"
+    app:cornerRadius="20dp"
+    android:textSize="14sp"
+    android:fontFamily="@font/nunito"
+    app:strokeColor="@color/orange_bright"
+    app:strokeWidth="2dp"
+    tools:text="Kamu memecah masalah, menarik
+pengetahuan dari data yang kompleks,
+dan merancang solusi praktis dan berskala" />

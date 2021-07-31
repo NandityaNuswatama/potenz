@@ -1,4 +1,4 @@
-package com.nandits.potenz.ui.choice
+package com.nandits.potenz.ui.test
 
 import android.os.Bundle
 import android.view.LayoutInflater

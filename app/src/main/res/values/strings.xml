@@ -35,6 +35,9 @@
     <string name="log_out">Log Out</string>
     <string name="pendidikan">Pendidikan</string>
     <string name="learn">Learn</string>
+    <string name="question1">Pernyataan mana paling menggambarkan kamu?</string>
+    <string name="question2">Bagaimana kamu membuat keputusan di tempat kerja?</string>
+    <string name="question3">pa preferensi kamu ketika mengerjakan sebuah proyek?</string>
 
     <string-array name="pendidikan_options">
         <item>--Pilih Pendidikan--</item>

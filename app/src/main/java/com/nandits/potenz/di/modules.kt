@@ -6,6 +6,7 @@ import com.nandits.potenz.data.remote.ApiService
 import com.nandits.potenz.data.remote.RemoteDataSource
 import com.nandits.potenz.ui.adapter.CardItemAdapter
 import com.nandits.potenz.ui.adapter.MultiSelectAdapter
+import com.nandits.potenz.ui.adapter.TestAdapter
 import com.nandits.potenz.ui.choice.ChoiceViewModel
 import com.nandits.potenz.ui.home.HomeViewModel
 import com.nandits.potenz.ui.profile.ProfileViewModel
@@ -54,4 +55,5 @@ val viewModelModule = module {
 
 val adapterModule = module {
     factory { MultiSelectAdapter() }
+    factory { TestAdapter() }
 }
