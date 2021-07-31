@@ -34,6 +34,7 @@
     <string name="karakteristik_teratas">Karakteristik Teratas</string>
     <string name="log_out">Log Out</string>
     <string name="pendidikan">Pendidikan</string>
+    <string name="learn">Learn</string>
 
     <string-array name="pendidikan_options">
         <item>--Pilih Pendidikan--</item>

@@ -7,14 +7,9 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_consult"
-        android:icon="@drawable/icon_consult"
-        android:title="@string/consult" />
-
-    <item
         android:id="@+id/navigation_course"
         android:icon="@drawable/icon_course"
-        android:title="@string/course" />
+        android:title="@string/learn" />
 
     <item
         android:id="@+id/navigation_insight"

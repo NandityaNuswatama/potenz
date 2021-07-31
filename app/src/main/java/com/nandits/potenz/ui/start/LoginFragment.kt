@@ -67,7 +67,7 @@ class LoginFragment : Fragment(), AdapterView.OnItemSelectedListener {
                                         }
                                         is Resource.Success -> {
                                             viewModel.saveUser(login.data as UserModel)
-                                            findNavController().navigate(R.id.action_loginFragment_to_navigation_home)
+                                            findNavController().navigate(R.id.action_loginFragment_to_chooseInterestFragment)
                                         }
                                     }
                                 })

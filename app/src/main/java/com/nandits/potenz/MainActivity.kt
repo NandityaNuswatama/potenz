@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.navigation_consult -> navView.isVisible = true
                 R.id.navigation_home -> navView.isVisible = true
                 R.id.navigation_course -> navView.isVisible = true
                 R.id.navigation_insight -> navView.isVisible = true
