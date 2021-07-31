@@ -12,13 +12,13 @@ import com.nandits.potenz.databinding.FragmentChooseMotivationBinding
 import com.nandits.potenz.ui.adapter.MultiSelectAdapter
 import com.nandits.potenz.utils.ListData
 import org.koin.android.ext.android.inject
-import timber.log.Timber
-
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ChooseMotivationFragment : Fragment() {
     private var _binding: FragmentChooseMotivationBinding? = null
     private val binding get() = _binding!!
     private val mAdapter by inject<MultiSelectAdapter>()
+    private val viewModel by viewModel<ChoiceViewModel>()
     
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -50,7 +50,7 @@ class ChooseMotivationFragment : Fragment() {
             mAdapter.setData(ListData.listMotivation)
             mAdapter.onItemClick = {
                 it.isSelected = !it.isSelected
-                Timber.d(it.isSelected.toString())
+                viewModel
             }
         }
     }
