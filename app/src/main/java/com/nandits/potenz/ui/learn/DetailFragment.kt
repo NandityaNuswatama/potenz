@@ -20,9 +20,6 @@ class DetailFragment : Fragment() {
     private val url by lazy {
         arguments?.getString(URL)
     }
-    private val title by lazy {
-        arguments?.getString(TITLE)
-    }
     
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -58,6 +55,5 @@ class DetailFragment : Fragment() {
     
     companion object{
         const val URL = "url"
-        const val TITLE = "title"
     }
 }

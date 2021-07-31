@@ -32,6 +32,9 @@
         <action
             android:id="@+id/action_navigation_course_to_ticketFragment"
             app:destination="@id/ticketFragment" />
+        <action
+            android:id="@+id/action_navigation_course_to_detailVideoFragment"
+            app:destination="@id/detailVideoFragment" />
     </fragment>
 
     <fragment
@@ -131,8 +134,8 @@
             android:id="@+id/action_testFragment_self"
             app:destination="@id/testFragment" />
         <action
-            android:id="@+id/action_testFragment_to_testResultFragment"
-            app:destination="@id/testResultFragment" />
+            android:id="@+id/action_testFragment_to_loadingResultFragment"
+            app:destination="@id/loadingResultFragment" />
     </fragment>
     <fragment
         android:id="@+id/testResultFragment"
@@ -179,4 +182,18 @@
         android:name="com.nandits.potenz.ui.learn.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/detailVideoFragment"
+        android:name="com.nandits.potenz.ui.learn.DetailVideoFragment"
+        android:label="fragment_detail_video"
+        tools:layout="@layout/fragment_detail_video" />
+    <fragment
+        android:id="@+id/loadingResultFragment"
+        android:name="com.nandits.potenz.ui.test.LoadingResultFragment"
+        android:label="fragment_loading_result"
+        tools:layout="@layout/fragment_loading_result" >
+        <action
+            android:id="@+id/action_loadingResultFragment_to_testResultFragment"
+            app:destination="@id/testResultFragment" />
+    </fragment>
 </navigation>

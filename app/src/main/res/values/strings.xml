@@ -74,6 +74,12 @@
     <string name="beli_tiket">Beli Tiket</string>
     <string name="untuk_membuka_konten_ini_anda_memerlukan_tiket_ingin_beli_tiket">Untuk membuka konten ini Anda memerlukan tiket. Ingin beli tiket?</string>
     <string name="konten_terkunci">Konten Terkunci</string>
+    <string name="learning_basic_programming">Learning Basic Programming</string>
+    <string name="quincy_larson">Quincy Larson</string>
+    <string name="freecodecamp_org">freecodecamp.org</string>
+    <string name="description">Description</string>
+    <string name="pada_course_ini_kamu_akan_mempelajari_apa_bahasa_pemrograman_dimulai_dari_awal_hingga_kamu_membuat_program_sendiri_di_akhir_akan_ada_challenge_untuk_menuji_kemampuanmu">Pada course ini kamu akan mempelajari apa itu bahasa pemrograman. Dimulai dari awal hingga kamu membuat program sendiri. Di akhir akan ada challenge untuk menuji kemampuanmu!</string>
+    <string name="playlist">Playlist</string>
 
     <string-array name="pendidikan_options">
         <item>-- Pilih Pendidikan --</item>

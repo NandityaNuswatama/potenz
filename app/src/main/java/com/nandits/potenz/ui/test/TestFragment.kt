@@ -62,7 +62,7 @@ class TestFragment : Fragment() {
                     binding.tvQuestion.text = resources.getString(R.string.question3)
                     mAdapter.setData(ListData.question3)
                     mAdapter.onItemClick = {
-                        findNavController().navigate(R.id.action_testFragment_to_testResultFragment)
+                        findNavController().navigate(R.id.action_testFragment_to_loadingResultFragment)
                     }
                 }
             }

@@ -35,7 +35,7 @@ class PaymentFragment : Fragment() {
         with(binding){
             btnBack.setOnClickListener { findNavController().navigateUp() }
             btnNext.setOnClickListener {
-                viewModel.buyTicket("20").observe(viewLifecycleOwner, {
+                viewModel.buyTicket("11").observe(viewLifecycleOwner, {
                     when(it){
                         is Resource.Loading -> {}
                         is Resource.Error -> {
