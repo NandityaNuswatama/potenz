@@ -1,4 +1,3 @@
-# potenz
 <h1>Potenz by Awang Long</h1>
 Team name: Awang Long
 
@@ -9,4 +8,5 @@ Product Description: Potenz is an application that helps its users to find their
 GitHub:
 
 o> Harisno: https://github.com/enow20/Potenz180DC (Machine Learning)
+
 o> Nandit: https://github.com/NandityaNuswatama/potenz (Android Apps)
