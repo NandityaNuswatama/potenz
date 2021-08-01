@@ -61,7 +61,7 @@ class TestResultFragment : Fragment() {
             }
             mAdapter.cantOpenClick = {
                 activity?.dialogShow {
-                    findNavController().navigate(R.id.action_navigation_course_to_ticketFragment)
+                    findNavController().navigate(R.id.action_navigation_insight_to_ticketFragment)
                 }
             }
         }
