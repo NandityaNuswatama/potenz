@@ -26,4 +26,6 @@ class Repository(
     fun logOut() = userPreference.eraseData()
     
     fun updateUser(body: JsonObject) = remoteDataSource.updateUser(userPreference.getName().toString(), body)
+    
+    fun updateTicketLocale(num: String) = userPreference.updateTicket(num)
 }

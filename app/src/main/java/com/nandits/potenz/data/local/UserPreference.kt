@@ -20,6 +20,10 @@ class UserPreference(private val context: Context) {
         putString(SUBSCRIBE, user.subscription)
     }
     
+    fun updateTicket(num: String) = preferences.edit {
+        putString(SUBSCRIBE, num)
+    }
+    
     fun eraseData() = preferences.edit {
         remove(NAME)
         remove(LEVEL)

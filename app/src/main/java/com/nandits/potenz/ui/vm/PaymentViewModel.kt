@@ -15,4 +15,6 @@ class PaymentViewModel(private val repository: Repository): ViewModel() {
         }
         return repository.updateUser(body).asLiveData()
     }
+    
+    fun updateTicketLocale(num: String) = repository.updateTicketLocale(num)
 }

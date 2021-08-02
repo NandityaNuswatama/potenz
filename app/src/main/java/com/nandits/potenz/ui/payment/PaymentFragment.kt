@@ -43,6 +43,7 @@ class PaymentFragment : Fragment() {
                         }
                         is Resource.Success -> {
                             linePayment.isGone = false
+                            viewModel.updateTicketLocale("11")
                             Toast.makeText(requireContext(), "Mohon tunggu sebentar", Toast.LENGTH_SHORT).show()
                             Handler(Looper.getMainLooper()).postDelayed({
                                 linePayment.isGone = true
